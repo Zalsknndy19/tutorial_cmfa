@@ -65,7 +65,7 @@ proxies:
       path: "/36.95.152.58-12137"
       headers:
         Host: zalsknndy19.hikosiga.workers.dev
-  - name: "🇮🇩 CV. Rumahweb Indonesia WS TLS [203.194.112.119]"
+  - name: "🇮🇩 CV. Rumahweb Indonesia WS TLS [203.194.112.19]"
     type: vless
     server: edu.ruangguru.com
     port: 443
@@ -271,7 +271,7 @@ proxy-groups:
     proxies:
       - "🇮🇩 PT Pusat Media Indonesia WS TLS [103.6.207.108]"
       - "🇮🇩 PT Telekomunikasi Indonesia WS TLS [36.95.152.58]"
-      - "🇮🇩 CV. Rumahweb Indonesia WS TLS [203.194.112.119]"
+      - "🇮🇩 CV. Rumahweb Indonesia WS TLS [203.194.112.19]"
       - "🇮🇩 CV. Rumahweb Indonesia WS TLS [203.194.112.119]"
       - "🇯🇵 Vultr Holdings WS TLS [198.13.42.58]"
       - "🇯🇵 Oracle Corporation WS TLS [217.142.230.253]"
@@ -296,7 +296,7 @@ proxy-groups:
     proxies:
       - "🇮🇩 PT Pusat Media Indonesia WS TLS [103.6.207.108]"
       - "🇮🇩 PT Telekomunikasi Indonesia WS TLS [36.95.152.58]"
-      - "🇮🇩 CV. Rumahweb Indonesia WS TLS [203.194.112.119]"
+      - "🇮🇩 CV. Rumahweb Indonesia WS TLS [203.194.112.19]"
       - "🇮🇩 CV. Rumahweb Indonesia WS TLS [203.194.112.119]"
       - "🇯🇵 Vultr Holdings WS TLS [198.13.42.58]"
       - "🇯🇵 Oracle Corporation WS TLS [217.142.230.253]"
