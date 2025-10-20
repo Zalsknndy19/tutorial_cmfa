@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Clash Meta for Android</title>
+    <style>
+        /* ... (Semua gaya CSS dari sebelumnya tetap sama) ... */
+        :root {
+            --bg-color: #121212;
+            --surface-color: #1e1e1e;
+            --primary-color: #03dac6;
+            --text-color: #e0e0e0;
+            --secondary-text-color: #a0a0a0;
+            --border-color: #333;
+            --disabled-color: #555;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0; padding: 0; line-height: 1.6;
+        }
+        .container { max-width: 800px; margin: 20px auto; padding: 0 15px; }
+        header { text-align: center; border-bottom: 1px solid var(--border-color); padding-bottom: 20px; margin-bottom: 30px; }
+        header h1 { color: var(--primary-color); margin: 0; }
+        header p { color: var(--secondary-text-color); font-size: 1.1em; }
+        .card { background-color: var(--surface-color); border-radius: 12px; padding: 20px; margin-bottom: 25px; border: 1px solid var(--border-color); }
+        h2 { color: var(--primary-color); border-bottom: 2px solid var(--primary-color); padding-bottom: 5px; display: inline-block; }
+        h3 { color: #bb86fc; }
+        .btn { display: block; width: 100%; padding: 15px; margin: 10px 0; background-color: var(--primary-color); color: #000; text-align: center; text-decoration: none; font-weight: bold; font-size: 1.1em; border-radius: 8px; transition: background-color 0.3s ease; box-sizing: border-box; }
+        .btn:hover { background-color: #018786; }
+        .btn.disabled { background-color: var(--disabled-color); cursor: not-allowed; }
+        ol { list-style: none; counter-reset: tutorial-counter; padding-left: 0; }
+        ol li { counter-increment: tutorial-counter; margin-bottom: 15px; padding-left: 40px; position: relative; background-color:#282e2e; border-radius:12px;}
+        ol li::before { content: counter(tutorial-counter); position: absolute; left: 0; top: 0; width: 30px; height: 30px; background-color: var(--primary-color); color: #000; border-radius: 50%; text-align: center; font-weight: bold; line-height: 30px; }
+        img { max-width: 100%; height: auto; border-radius: 8px; border: 2px solid var(--border-color); margin-top: 10px; margin-bottom:20px;}
+        .notice { background-color: #3a2e00; border: 1px solid #a77700; color: #ffe082; padding: 15px; border-radius: 8px; }
+        footer { text-align: center; padding: 20px; color: var(--secondary-text-color); border-top: 1px solid var(--border-color); margin-top: 30px; }
+        a { color: var(--primary-color); }
+        /* Gaya tambahan untuk timestamp */
+        .timestamp {
+            display: block;
+            text-align: center;
+            color: var(--secondary-text-color);
+            font-size: 0.9em;
+            margin-top: -5px;
+            margin-bottom: 10px;
+        }
+        .music-player {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 50px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+
+        .music-player button {
+            background-color: var(--primary-color);
+            color: #000;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.2em;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .music-player input[type="range"] {
+            margin-left: 10px;
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- ... (Header dan bagian tutorial lainnya tetap sama) ... -->
+        <header>
+            <h1>Tutorial Clash Meta</h1>
+            <p>Panduan langkah demi langkah untuk pemula.</p>
+        </header>
+
+        <main>
+            <div class="card notice">
+                <strong>Penting:</strong> Aplikasi ini tidak diunduh dari Play Store. Selalu ada risiko saat menginstal aplikasi dari luar. Harap dipahami dan gunakan dengan bijak.
+            </div>
+
+            <div class="card">
+                <h2>Langkah Awal: Persiapan</h2>
+                <p>Sebelum memulai, ada dua hal yang wajib kamu siapkan:</p>
+                <ol>
+                    <li>
+                        <strong>Unduh Aplikasi Clash Meta (CMFA)</strong>
+                        <p>Ini adalah aplikasi utama yang akan kita gunakan. Klik tombol di bawah untuk mengunduh versi terbaru.</p>
+                        <!-- GANTI TAUTAN INI DENGAN LINK APK CMFA -->
+                        <a href="#" class="btn">Unduh Clash Meta (APK)</a>
+                    </li>
+                    <li>
+                        <strong>Unduh File Konfigurasi Terbaru</strong>
+                        <p>Tombol di bawah ini akan selalu menunjuk ke file konfigurasi paling baru secara otomatis.</p>
+                        
+                        <!-- INI TOMBOL DINAMIS KITA -->
+                        <a href="#" id="config-download-btn" class="btn disabled" download>
+                            Mencari file terbaru...
+                        </a>
+                        <span id="config-timestamp" class="timestamp"></span>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="card">
+                <h2>Cara Penggunaan</h2>
+                <p>Setelah kedua file di atas siap, ikuti langkah-langkah berikut dengan teliti.</p>
+
+                <!-- ======================================================= -->
+                <!-- DUMMY TUTORIAL 1: CARA MEMASUKKAN FILE KONFIGURASI      -->
+                <!-- ======================================================= -->
+                <h3>1. Impor Profil Konfigurasi</h3>
+                <p>Langkah pertama adalah memasukkan file <code>clash.yaml</code> ke dalam aplikasi.</p>
+                <ol>
+                    <li>Buka aplikasi Clash Meta yang sudah kamu install.</li>
+                    <li>Di halaman utama, cari dan ketuk menu <strong>"Profile"</strong> atau <strong>"Profil"</strong> (biasanya di bagian bawah).</li>
+                    <img src="./img/01.jpg" alt="Screenshot proses impor profil">
+                    <li>Di halaman Profil, ketuk ikon tambah <strong>(+)</strong> di pojok kanan atas.</li>
+                    <img src="./img/02.jpg" alt="Screenshot proses impor profil">
+                    <li>Pilih opsi <strong>"Import from File"</strong> atau <strong>"Impor dari Berkas"</strong>.</li>
+                    <img src="./img/03.jpg" alt="Screenshot proses impor profil">
+                    <li>Isi bagian <strong>Name</strong> sesuai keinginan anda kemudian klik bagian <strong>Browse Files</strong> untuk melanjutkan.</li>
+                    <img src="./img/04.jpg" alt="Screenshot proses impor profil">
+                    <li>Klik titik 3 disamping <strong>Configuration.yaml</strong> kemudian klik <strong>⬇️ Import</strong> dibawah.</li>
+                    <img src="./img/05.jpg" alt="Screenshot proses impor profil">
+                    <img src="./img/06.jpg" alt="Screenshot proses impor profil">
+                    <li>Jika dibagian <strong>Recent/Terbaru</strong> tidak ada file seperti <code>clash_20251020_095319.yaml</code> maka klik tombol <strong>garis 3 dipojok</strong> kiri atas lalu klik bagian <strong>Download</strong>.</li>
+                    <img src="./img/07.jpg" alt="Screenshot proses impor profil">
+                    <img src="./img/08.jpg" alt="Screenshot proses impor profil">
+                    <li>Cari dan pilih file <code>clash_20251020_095319.yaml</code> yang sudah kamu unduh tadi.</li>
+                    <img src="./img/09.jpg" alt="Screenshot proses impor profil">
+                    <p>Jika berhasil, kamu akan melihat profil baru muncul di daftar.</p>
+                    <li>Klik tombol kembali dipojok kiri, lalu klik tombol <strong>Save</strong> dipojok kanan atas untuk menyimpan konfigurasinya.</li>
+                    <img src="./img/10.jpg" alt="Screenshot proses impor profil">
+                    <img src="./img/11.jpg" alt="Screenshot proses impor profil">
+                    <li>Di halaman <strong>Profiles</strong> klik satu kali konfigurasi yang baru saja dibuat untuk mengaktifkannya, setelah konfigurasi aktif/dipilih (ditandai dengan bulatan warna biru) klik tombol kembali dipojok kiri atas untuk kembali ke halaman utama.</li>
+                    <img src="./img/12.jpg" alt="Screenshot proses impor profil">
+                </ol>
+
+                <!-- ======================================================= -->
+                <!-- DUMMY TUTORIAL 2: CARA MENGHUBUNGKAN DAN TES KONEKSI   -->
+                <!-- ======================================================= -->
+                <h3>2. Mulai Koneksi dan Tes Ping</h3>
+                <p>Setelah profil siap, saatnya menghubungkan dan memastikan semuanya berjalan.</p>
+                <ol>
+                    <li>Tekan tombol yang ditandai seperti gambar dibawah untuk menjalankan aplikasi Clash Meta for Android .</li>
+                    <img src="./img/13.jpg" alt="Screenshot Koneksi">
+                    <li>Aplikasi akan meminta izin untuk membuat koneksi VPN. Pertama ceklis bagian <strong>Don't ask again/Jangan tanya lagi</strong> agar tidak meminta perizinan setiap kali aplikasi dijalankan, lalu pilih <strong>"Allow"</strong> atau <strong>"Izinkan"</strong>.</li>
+                    <img src="./img/14.jpg" alt="Screenshot Koneksi">
+                    <li>Jika tombol berubah menjadi "Running" atau "Berjalan", selamat, kamu sudah terhubung! Selanjutnya klik bagian <strong>Proxy</strong> untuk memastikan semuanya berjalan secara otomatis.</li>
+                    <img src="./img/15.jpg" alt="Screenshot Koneksi">
+                    <li>Setelah terbuka ketuk ikon petir (⚡) untuk menjalankan tes ping. Jika muncul angka (misalnya: 250,111), berarti koneksi internet sudah berjalan dan anda tinggal menggunakannya seperti biasa, pastikan yang aktif/dipilih di halaman <strong>💎 ZHStore</strong> adalah <strong>🚀 BEST-PING</strong>.</li>
+                    <img src="./img/16.jpg" alt="Screenshot Koneksi">
+                </ol>
+            </div>
+            
+            <div class="card">
+                <h2>Tips Tambahan</h2>
+                <ul>
+                    <li><strong>Memperbarui Konfigurasi:</strong> Jika ada pembaruan file <code>clash.yaml</code>, kamu bisa mengunduhnya lagi, lalu di halaman "Profiles", geser profil lama ke kiri dan hapus. Setelah itu, impor lagi file yang baru.</li>
+                    <li><strong>Koneksi Lambat?</strong> Di tab "Proxy", kamu bisa memilih server/grup server yang berbeda jika tersedia. Coba jalankan tes ping untuk melihat mana yang paling cepat.</li>
+                    <li><strong>Tidak Terhubung?</strong> Pastikan kamu sudah memberikan semua izin yang diminta aplikasi dan kuota yang sesuai masih aktif.</li>
+                </ul>
+            </div>
+
+        </main>
+
+        <footer>
+            <p>Dibuat untuk mempermudah. Gunakan dengan bijak. Selamat mencoba!</p>
+        </footer>
+    </div>
+    <div class="music-player">
+        <button id="playPauseBtn">▶️</button>
+        <input hidden type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.8">
+    </div>
+    
+    <!-- Elemen audio, tapi 'src' akan diisi oleh JavaScript -->
+    <audio id="backgroundMusic" loop></audio>
+
+    <!-- ======================================================= -->
+    <!-- "OTAK" JAVASCRIPT ADA DI SINI                           -->
+    <!-- ======================================================= -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- PENGATURAN - GANTI DENGAN USERNAME & REPO ANDA ---
+            const GITHUB_USERNAME = "NAMA_PENGGUNA_GITHUB_ANDA";
+            const REPO_NAME = "NAMA_REPOSITORI_ANDA";
+            // ----------------------------------------------------
+
+            const API_URL = `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}/contents/`;
+            
+            const downloadBtn = document.getElementById('config-download-btn');
+            const timestampSpan = document.getElementById('config-timestamp');
+
+            // Fungsi untuk memformat tanggal agar lebih manusiawi
+            function formatTimestamp(filename) {
+                const match = filename.match(/clash_(\d{4})(\d{2})(\d{2})_(\d{2})(\d{2})(\d{2})\.yaml/);
+                if (!match) return 'Tidak diketahui';
+                
+                const [, year, month, day, hour, minute] = match;
+                const date = new Date(`${year}-${month}-${day}T${hour}:${minute}:00`);
+                
+                return date.toLocaleString('id-ID', {
+                    day: 'numeric', month: 'short', year: 'numeric',
+                    hour: '2-digit', minute: '2-digit', hour12: false
+                });
+            }
+
+            // Fungsi utama untuk mengambil dan memperbarui tombol
+            async function fetchLatestConfig() {
+                try {
+                    const response = await fetch(API_URL);
+                    if (!response.ok) {
+                        throw new Error(`Gagal menghubungi GitHub: ${response.statusText}`);
+                    }
+                    const files = await response.json();
+                    
+                    // 1. Filter untuk menemukan semua file clash_*.yaml
+                    const configFiles = files
+                        .map(file => file.name)
+                        .filter(name => name.startsWith('clash_') && name.endsWith('.yaml'));
+                        
+                    if (configFiles.length === 0) {
+                        throw new Error("Tidak ada file konfigurasi yang ditemukan.");
+                    }
+                    
+                    // 2. Urutkan untuk mendapatkan yang terbaru (string sort bekerja karena format YYYYMMDD)
+                    configFiles.sort().reverse();
+                    const latestFile = configFiles[0];
+                    
+                    // 3. Perbarui tombol unduhan
+                    downloadBtn.href = latestFile; // GitHub Pages otomatis menanganinya
+                    downloadBtn.textContent = `Unduh Konfigurasi (${latestFile})`;
+                    downloadBtn.classList.remove('disabled');
+                    downloadBtn.style.backgroundColor = '';
+                    downloadBtn.style.cursor = '';
+
+                    // 4. Perbarui timestamp
+                    timestampSpan.textContent = `Diperbarui: ${formatTimestamp(latestFile)}`;
+
+                } catch (error) {
+                    console.error("Error:", error);
+                    downloadBtn.textContent = "Gagal memuat file!";
+                    timestampSpan.textContent = error.message;
+                }
+            }
+
+            // Jalankan fungsi saat halaman dimuat
+            fetchLatestConfig();
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- DAFTAR PUTAR (PLAYLIST) ANDA ---
+            // Cukup tambahkan atau hapus URL di sini untuk mengubah musik.
+            // Cari musik gratis di Pixabay Music, Bensound, dll.
+            const musicPlaylist = [
+                'https://cdn.pixabay.com/download/audio/2025/06/21/audio_6ba00f091d.mp3',
+                'https://cdn.pixabay.com/download/audio/2025/03/24/audio_4ac8edd382.mp3',
+                'https://cdn.pixabay.com/download/audio/2025/06/11/audio_454d4c937a.mp3',
+                'https://cdn.pixabay.com/download/audio/2025/06/22/audio_79a4daf83a.mp3',
+                'https://cdn.pixabay.com/download/audio/2025/09/15/audio_497a89f5d2.mp3',
+                'https://cdn.pixabay.com/download/audio/2024/08/27/audio_640fae45a1.mp3',
+                'https://cdn.pixabay.com/download/audio/2025/03/10/audio_c66b783e40.mp3'
+            ];
+
+            const music = document.getElementById('backgroundMusic');
+            const playPauseBtn = document.getElementById('playPauseBtn');
+            const volumeSlider = document.getElementById('volumeSlider');
+            
+            const STORAGE_KEY_VOLUME = 'medievalMusicVolume';
+
+            // --- 1. MEMILIH & MEMUAT MUSIK RANDOM ---
+            function loadRandomTrack() {
+                // Pilih satu URL secara acak dari playlist
+                const randomIndex = Math.floor(Math.random() * musicPlaylist.length);
+                const randomTrackUrl = musicPlaylist[randomIndex];
+                
+                // Setel sumber audio dan muat
+                music.src = randomTrackUrl;
+                music.load(); // Penting untuk memuat file audio baru
+                console.log("Memuat trek:", randomTrackUrl);
+            }
+
+            // --- 2. KONTROL PEMUTAR MUSIK ---
+
+            // Fungsi untuk tombol Play/Pause
+            playPauseBtn.addEventListener('click', function() {
+                // Cek apakah konteks audio sudah diizinkan (penting untuk autoplay)
+                if (music.paused) {
+                    music.play().then(() => {
+                        playPauseBtn.textContent = '⏸️';
+                    }).catch(error => {
+                        console.error("Pemutaran gagal, interaksi pengguna mungkin diperlukan.", error);
+                    });
+                } else {
+                    music.pause();
+                    playPauseBtn.textContent = '▶️';
+                }
+            });
+
+            // Fungsi untuk kontrol volume (tetap menyimpan volume)
+            volumeSlider.addEventListener('input', function() {
+                music.volume = volumeSlider.value;
+                localStorage.setItem(STORAGE_KEY_VOLUME, volumeSlider.value);
+            });
+
+            // Saat satu lagu selesai, otomatis putar lagu random berikutnya
+            music.addEventListener('ended', function() {
+                console.log("Trek selesai, memuat trek baru...");
+                loadRandomTrack();
+                music.play(); // Langsung mainkan trek baru
+            });
+            
+            // --- INISIALISASI ---
+
+            // Memuat volume terakhir
+            const savedVolume = localStorage.getItem(STORAGE_KEY_VOLUME);
+            if (savedVolume) {
+                music.volume = parseFloat(savedVolume);
+                volumeSlider.value = parseFloat(savedVolume);
+            }
+
+            // Langsung muat trek random pertama saat halaman dibuka
+            loadRandomTrack();
+        });
+    </script>
+
+</body>
+</html>

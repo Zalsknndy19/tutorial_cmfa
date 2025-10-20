@@ -1,0 +1,318 @@
+# ===============================================
+# Template Konfigurasi Clash - Dibuat oleh ZHStore
+# ===============================================
+
+# Pengaturan Port
+# port: 7890             # Port untuk HTTP Proxy
+# socks-port: 7891       # Port untuk SOCKS5 Proxy
+tproxy-port: 7893        # Port untuk Transparent Proxy (Digunakan oleh Clash for Magisk)
+bind-address: "*"        # Izinkan koneksi dari semua alamat (LAN)
+
+# Pengaturan Umum
+mode: rule
+allow-lan: true
+log-level: silent
+external-controller: 0.0.0.0:9090
+external-ui: yacd-gh-pages # Antarmuka web default
+unified-delay: true
+ipv6: false
+
+# Pengaturan DNS
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:1053
+  enhanced-mode: redir-host
+  use-host: true
+  nameserver:
+    - 1.1.1.1
+    - 8.8.8.8
+  fallback:
+    - 1.0.0.1
+    - https://cloudflare-dns.com/dns-query
+
+# ===============================================
+# BLOK PROXY (AKAN DIISI SECARA DINAMIS)
+# ===============================================
+proxies:
+  - name: "🇮🇩 PT Pusat Media Indonesia WS TLS [103.6.207.108]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: fc60147e-76b8-4bc5-b691-90b2da79e3d2
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/103.6.207.108-8080"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "🇮🇩 PT Telekomunikasi Indonesia WS TLS [36.95.152.58]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: fc60147e-76b8-4bc5-b691-90b2da79e3d2
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/36.95.152.58-12137"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "🇮🇩 CV. Rumahweb Indonesia WS TLS [203.194.112.119]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: fc60147e-76b8-4bc5-b691-90b2da79e3d2
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/203.194.112.119-2053"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "🇮🇩 CV. Rumahweb Indonesia WS TLS [203.194.112.119]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: fc60147e-76b8-4bc5-b691-90b2da79e3d2
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/203.194.112.119-8443"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "🇯🇵 Vultr Holdings WS TLS [198.13.42.58]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: fc60147e-76b8-4bc5-b691-90b2da79e3d2
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/198.13.42.58-32954"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "🇯🇵 Oracle Corporation WS TLS [217.142.230.253]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: fc60147e-76b8-4bc5-b691-90b2da79e3d2
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/217.142.230.253-587"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "🇯🇵 Oracle Corporation WS TLS [138.2.10.217]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: fc60147e-76b8-4bc5-b691-90b2da79e3d2
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/138.2.10.217-27446"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "🇯🇵 Oracle Corporation WS TLS [138.2.32.76]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: fc60147e-76b8-4bc5-b691-90b2da79e3d2
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/138.2.32.76-15821"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "🇯🇵 GMO Internet WS TLS [118.27.12.40]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: fc60147e-76b8-4bc5-b691-90b2da79e3d2
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/118.27.12.40-38443"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "🇸🇬 ZENLA-1 WS TLS [144.24.78.162]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: fc60147e-76b8-4bc5-b691-90b2da79e3d2
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/144.24.78.162-443"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "🇸🇬 Alibaba Cloud - SG WS TLS [47.74.254.191]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: fc60147e-76b8-4bc5-b691-90b2da79e3d2
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/47.74.254.191-8900"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "🇸🇬 Oracle Corporation WS TLS [129.150.58.86]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: fc60147e-76b8-4bc5-b691-90b2da79e3d2
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/129.150.58.86-57621"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "🇸🇬 Oracle Svenska AB WS TLS [213.35.108.135]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: fc60147e-76b8-4bc5-b691-90b2da79e3d2
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/213.35.108.135-12596"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "🇸🇬 DigitalOcean WS TLS [178.128.80.43]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: fc60147e-76b8-4bc5-b691-90b2da79e3d2
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/178.128.80.43-443"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "🇸🇬 Greencloud LLC WS TLS [194.127.193.124]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: fc60147e-76b8-4bc5-b691-90b2da79e3d2
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/194.127.193.124-24467"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+
+
+# ===============================================
+# GRUP PROXY (AKAN DIISI SECARA DINAMIS)
+# ===============================================
+proxy-groups:
+  - name: 💎 ZHStore
+    type: select
+    proxies:
+      - "🇮🇩 PT Pusat Media Indonesia WS TLS [103.6.207.108]"
+      - "🇮🇩 PT Telekomunikasi Indonesia WS TLS [36.95.152.58]"
+      - "🇮🇩 CV. Rumahweb Indonesia WS TLS [203.194.112.119]"
+      - "🇮🇩 CV. Rumahweb Indonesia WS TLS [203.194.112.119]"
+      - "🇯🇵 Vultr Holdings WS TLS [198.13.42.58]"
+      - "🇯🇵 Oracle Corporation WS TLS [217.142.230.253]"
+      - "🇯🇵 Oracle Corporation WS TLS [138.2.10.217]"
+      - "🇯🇵 Oracle Corporation WS TLS [138.2.32.76]"
+      - "🇯🇵 GMO Internet WS TLS [118.27.12.40]"
+      - "🇸🇬 ZENLA-1 WS TLS [144.24.78.162]"
+      - "🇸🇬 Alibaba Cloud - SG WS TLS [47.74.254.191]"
+      - "🇸🇬 Oracle Corporation WS TLS [129.150.58.86]"
+      - "🇸🇬 Oracle Svenska AB WS TLS [213.35.108.135]"
+      - "🇸🇬 DigitalOcean WS TLS [178.128.80.43]"
+      - "🇸🇬 Greencloud LLC WS TLS [194.127.193.124]"
+
+      - 🚀 BEST-PING
+      - DIRECT
+
+  - name: 🚀 BEST-PING
+    type: url-test
+    url: http://www.gstatic.com/generate_204 # URL tes ping standar
+    interval: 300 # Tes setiap 5 menit
+    tolerance: 50
+    proxies:
+      - "🇮🇩 PT Pusat Media Indonesia WS TLS [103.6.207.108]"
+      - "🇮🇩 PT Telekomunikasi Indonesia WS TLS [36.95.152.58]"
+      - "🇮🇩 CV. Rumahweb Indonesia WS TLS [203.194.112.119]"
+      - "🇮🇩 CV. Rumahweb Indonesia WS TLS [203.194.112.119]"
+      - "🇯🇵 Vultr Holdings WS TLS [198.13.42.58]"
+      - "🇯🇵 Oracle Corporation WS TLS [217.142.230.253]"
+      - "🇯🇵 Oracle Corporation WS TLS [138.2.10.217]"
+      - "🇯🇵 Oracle Corporation WS TLS [138.2.32.76]"
+      - "🇯🇵 GMO Internet WS TLS [118.27.12.40]"
+      - "🇸🇬 ZENLA-1 WS TLS [144.24.78.162]"
+      - "🇸🇬 Alibaba Cloud - SG WS TLS [47.74.254.191]"
+      - "🇸🇬 Oracle Corporation WS TLS [129.150.58.86]"
+      - "🇸🇬 Oracle Svenska AB WS TLS [213.35.108.135]"
+      - "🇸🇬 DigitalOcean WS TLS [178.128.80.43]"
+      - "🇸🇬 Greencloud LLC WS TLS [194.127.193.124]"
+
+
+# ===============================================
+# ATURAN (RULES)
+# ===============================================
+rules:
+  - MATCH,💎 ZHStore
