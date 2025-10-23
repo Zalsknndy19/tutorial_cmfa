@@ -1,0 +1,488 @@
+# ===============================================
+# Template Konfigurasi Clash - Dibuat oleh ZHStore
+# ===============================================
+
+# Pengaturan Port
+# port: 7890             # Port untuk HTTP Proxy
+# socks-port: 7891       # Port untuk SOCKS5 Proxy
+tproxy-port: 7893        # Port untuk Transparent Proxy (Digunakan oleh Clash for Magisk)
+bind-address: "*"        # Izinkan koneksi dari semua alamat (LAN)
+
+# Pengaturan Umum
+mode: rule
+allow-lan: true
+log-level: silent
+external-controller: 0.0.0.0:9090
+external-ui: yacd-gh-pages # Antarmuka web default
+unified-delay: true
+ipv6: false
+
+# Pengaturan DNS
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:1053
+  enhanced-mode: redir-host
+  use-host: true
+  nameserver:
+    - 1.1.1.1
+    - 8.8.8.8
+  fallback:
+    - 1.0.0.1
+    - https://cloudflare-dns.com/dns-query
+
+# ===============================================
+# BLOK PROXY (AKAN DIISI SECARA DINAMIS)
+# ===============================================
+proxies:
+  - name: "ID Amazon.com2 [43.218.77.16]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 164810ec-8377-44c5-9a4c-e1c9c64932f5
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/43.218.77.16-1443"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "ID Amazon.com [43.218.77.16]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 164810ec-8377-44c5-9a4c-e1c9c64932f5
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/43.218.77.16-443"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "ID PT Pusat Media Indonesia [103.6.207.108]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 164810ec-8377-44c5-9a4c-e1c9c64932f5
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/103.6.207.108-8080"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "ID PT Telekomunikasi Indonesia [36.95.152.58]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 164810ec-8377-44c5-9a4c-e1c9c64932f5
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/36.95.152.58-12137"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "JP Vultr Holdings [198.13.42.58]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 164810ec-8377-44c5-9a4c-e1c9c64932f5
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/198.13.42.58-32954"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "JP Oracle Corporation [138.2.10.149]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 164810ec-8377-44c5-9a4c-e1c9c64932f5
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/138.2.10.149-45638"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "JP Oracle Corporation [152.69.199.70]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 164810ec-8377-44c5-9a4c-e1c9c64932f5
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/152.69.199.70-8443"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "JP Oracle Corporation [150.230.204.21]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 164810ec-8377-44c5-9a4c-e1c9c64932f5
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/150.230.204.21-10243"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "JP Oracle Corporation [138.2.18.82]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 164810ec-8377-44c5-9a4c-e1c9c64932f5
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/138.2.18.82-8880"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "SG ZENLA-1 [144.24.78.162]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 164810ec-8377-44c5-9a4c-e1c9c64932f5
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/144.24.78.162-443"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "SG Alibaba Cloud - SG [47.74.254.191]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 164810ec-8377-44c5-9a4c-e1c9c64932f5
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/47.74.254.191-8900"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "SG Oracle Corporation [129.150.58.86]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 164810ec-8377-44c5-9a4c-e1c9c64932f5
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/129.150.58.86-57621"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "SG Oracle Corporation [146.235.18.248]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 164810ec-8377-44c5-9a4c-e1c9c64932f5
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/146.235.18.248-45137"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "SG Oracle Corporation [129.150.49.58]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 164810ec-8377-44c5-9a4c-e1c9c64932f5
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/129.150.49.58-18650"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "SG Oracle Corporation [129.150.36.188]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 164810ec-8377-44c5-9a4c-e1c9c64932f5
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/129.150.36.188-53435"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "SG Oracle Svenska AB [213.35.100.31]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 164810ec-8377-44c5-9a4c-e1c9c64932f5
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/213.35.100.31-47112"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "SG Oracle Svenska AB [213.35.107.73]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 164810ec-8377-44c5-9a4c-e1c9c64932f5
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/213.35.107.73-443"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "SG Greencloud LLC [194.127.193.240]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 164810ec-8377-44c5-9a4c-e1c9c64932f5
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/194.127.193.240-50791"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "SG Greencloud LLC [194.127.193.124]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 164810ec-8377-44c5-9a4c-e1c9c64932f5
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/194.127.193.124-24467"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "SG DigitalOcean [104.248.145.216]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 164810ec-8377-44c5-9a4c-e1c9c64932f5
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/104.248.145.216-443"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "SG Alibaba Cloud (Singapore) Private Limited [8.219.58.164]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 164810ec-8377-44c5-9a4c-e1c9c64932f5
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/8.219.58.164-57373"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "SG Alibaba Cloud (Singapore) Private Limited [8.219.59.132]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 164810ec-8377-44c5-9a4c-e1c9c64932f5
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/8.219.59.132-48130"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "SG Melbikomas UAB [91.192.81.154]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 164810ec-8377-44c5-9a4c-e1c9c64932f5
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/91.192.81.154-8443"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "SG M1 LIMITED [143.42.66.91]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 164810ec-8377-44c5-9a4c-e1c9c64932f5
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/143.42.66.91-443"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "SG 16 COLLYER QUAY [43.156.181.203]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 164810ec-8377-44c5-9a4c-e1c9c64932f5
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/43.156.181.203-443"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+
+
+# ===============================================
+# GRUP PROXY (AKAN DIISI SECARA DINAMIS)
+# ===============================================
+proxy-groups:
+  - name: 💎 ZHStore
+    type: select
+    proxies:
+      - "ID Amazon.com2 [43.218.77.16]"
+      - "ID Amazon.com [43.218.77.16]"
+      - "ID PT Pusat Media Indonesia [103.6.207.108]"
+      - "ID PT Telekomunikasi Indonesia [36.95.152.58]"
+      - "JP Vultr Holdings [198.13.42.58]"
+      - "JP Oracle Corporation [138.2.10.149]"
+      - "JP Oracle Corporation [152.69.199.70]"
+      - "JP Oracle Corporation [150.230.204.21]"
+      - "JP Oracle Corporation [138.2.18.82]"
+      - "SG ZENLA-1 [144.24.78.162]"
+      - "SG Alibaba Cloud - SG [47.74.254.191]"
+      - "SG Oracle Corporation [129.150.58.86]"
+      - "SG Oracle Corporation [146.235.18.248]"
+      - "SG Oracle Corporation [129.150.49.58]"
+      - "SG Oracle Corporation [129.150.36.188]"
+      - "SG Oracle Svenska AB [213.35.100.31]"
+      - "SG Oracle Svenska AB [213.35.107.73]"
+      - "SG Greencloud LLC [194.127.193.240]"
+      - "SG Greencloud LLC [194.127.193.124]"
+      - "SG DigitalOcean [104.248.145.216]"
+      - "SG Alibaba Cloud (Singapore) Private Limited [8.219.58.164]"
+      - "SG Alibaba Cloud (Singapore) Private Limited [8.219.59.132]"
+      - "SG Melbikomas UAB [91.192.81.154]"
+      - "SG M1 LIMITED [143.42.66.91]"
+      - "SG 16 COLLYER QUAY [43.156.181.203]"
+
+      - 🚀 BEST-PING
+      - DIRECT
+
+  - name: 🚀 BEST-PING
+    type: url-test
+    url: http://www.gstatic.com/generate_204 # URL tes ping standar
+    interval: 300 # Tes setiap 5 menit
+    tolerance: 50
+    proxies:
+      - "ID Amazon.com2 [43.218.77.16]"
+      - "ID Amazon.com [43.218.77.16]"
+      - "ID PT Pusat Media Indonesia [103.6.207.108]"
+      - "ID PT Telekomunikasi Indonesia [36.95.152.58]"
+      - "JP Vultr Holdings [198.13.42.58]"
+      - "JP Oracle Corporation [138.2.10.149]"
+      - "JP Oracle Corporation [152.69.199.70]"
+      - "JP Oracle Corporation [150.230.204.21]"
+      - "JP Oracle Corporation [138.2.18.82]"
+      - "SG ZENLA-1 [144.24.78.162]"
+      - "SG Alibaba Cloud - SG [47.74.254.191]"
+      - "SG Oracle Corporation [129.150.58.86]"
+      - "SG Oracle Corporation [146.235.18.248]"
+      - "SG Oracle Corporation [129.150.49.58]"
+      - "SG Oracle Corporation [129.150.36.188]"
+      - "SG Oracle Svenska AB [213.35.100.31]"
+      - "SG Oracle Svenska AB [213.35.107.73]"
+      - "SG Greencloud LLC [194.127.193.240]"
+      - "SG Greencloud LLC [194.127.193.124]"
+      - "SG DigitalOcean [104.248.145.216]"
+      - "SG Alibaba Cloud (Singapore) Private Limited [8.219.58.164]"
+      - "SG Alibaba Cloud (Singapore) Private Limited [8.219.59.132]"
+      - "SG Melbikomas UAB [91.192.81.154]"
+      - "SG M1 LIMITED [143.42.66.91]"
+      - "SG 16 COLLYER QUAY [43.156.181.203]"
+
+
+# ===============================================
+# ATURAN (RULES)
+# ===============================================
+rules:
+  - MATCH,💎 ZHStore
