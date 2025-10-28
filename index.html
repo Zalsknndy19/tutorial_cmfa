@@ -86,7 +86,7 @@
     <div class="container">
         <!-- ... (Header dan bagian tutorial lainnya tetap sama) ... -->
         <header>
-            <h1>Tutorial Clash Meta</h1>
+            <h1>Tutorial Clash Meta for Android</h1>
             <p>Panduan langkah demi langkah untuk pemula.</p>
         </header>
 
@@ -94,14 +94,25 @@
             <div class="card notice">
                 <strong>Penting:</strong> Aplikasi ini tidak diunduh dari Play Store. Selalu ada risiko saat menginstal aplikasi dari luar. Harap dipahami dan gunakan dengan bijak.
             </div>
+            <div class="card notice">
+              Tutorial ini memerlukan Kuota Belajar / Ilmu Pedia yang hanya tersedia di Kartu SIM <strong>Telkomsel</strong>, untuk Kartu SIM lainnya menyusul.
+            </div>
 
             <div class="card">
-                <h2>Langkah Awal: Persiapan</h2>
-                <p>Sebelum memulai, ada dua hal yang wajib kamu siapkan:</p>
+                <h2 id="langkah">Langkah Awal: Persiapan</h2>
+                <p>Sebelum memulai, ada beberapa hal yang wajib kamu siapkan:</p>
                 <ol>
                     <li>
-                        <strong>Unduh Aplikasi Clash Meta (CMFA)</strong>
-                        <p>Ini adalah aplikasi utama yang akan kita gunakan. Klik tombol di bawah untuk mengunduh versi terbaru.</p>
+                        <strong>Beli Kuota Belajar</strong>
+                        <p>Jika belum ada aplikasi MyTelkomsel, unduh langsung lewat <strong>Play Store</strong> atau <a href="https://play.google.com/store/apps/details?id=com.telkomsel.telkomselcm">klik disini</a>, untuk cara pembelian kuotanya lihat <a href="#beli_kuota">disini</a>.</p>
+                    </li>
+                    <li>
+                        <strong>Ubah Pengaturan APN</strong>
+                        <p>Di beberapa ponsel dan daerah untuk menggunakan kuota ini pengguna diharuskan untuk mengubah pengaturan APN bawaan kartu agar kuota dan aplikasi yang akan kita gunakan bisa berjalan. Untuk cara mengubah pengaturan APN bisa Anda lihat <a href="#APN">disini</a>.</p>
+                    </li>
+                    <li>
+                        <strong>Unduh Aplikasi Clash Meta for Android (CMFA)</strong>
+                        <p>Ini adalah aplikasi utama yang akan kita gunakan. Klik tombol di bawah untuk mengunduh versi terbaru. Jika sudah punya aplikasinya lewati saja langkah ini.</p>
                         <!-- GANTI TAUTAN INI DENGAN LINK APK CMFA -->
                         <a href="https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/v2.11.18/cmfa-2.11.18-meta-universal-release.apk" class="btn">Unduh Clash Meta (APK)</a>
                     </li>
@@ -171,6 +182,44 @@
             </div>
             
             <div class="card">
+              <h2 id="APN">Cara mengubah pengaturan APN</h2>
+              <p>Untuk mengubah pengaturan APN di setiap ponsel pasti berbeda caranya, tapi saya akan memberikan gambaran agar memudahkan mencari pengaturannya, silahkan disimak baik-baik.</p>
+              <h3>Langkah untuk Mengubah/Menambahkan APN</h3>
+              <ol>
+                <li>Buka <strong>Pengaturan/Setelan/Settings</strong> ponsel Anda.</li>
+                <li>Klik <strong>Jaringan Seluler</strong>.</li>
+                <img src="./img/17.jpg" alt="Screenshot APN">
+                <li>Pilih Kartu SIM <strong>Telkomsel</strong> Anda (silahkan disesuaikan, karena saya memasangnya di slot SIM1 maka saya memilih SIM1).</li>
+                <img src="./img/18.jpg" alt="Screenshot APN">
+                <li>Pilih <strong>"Nama Titik Akses"</strong> atau <strong>"Access Point Name"</strong>.</li>
+                <img src="./img/19.jpg" alt="Screenshot APN">
+                <li>Klik icon tambah di pojok kanan atas.</li>
+                <img src="./img/20.jpg" alt="Screenshot APN">
+                <li>Di bagian <strong>Nama</strong> silahkan isi sesuai keinginan Anda, untuk bagian <strong>APN</strong> anda harus mengisinya dengan <strong>home</strong> (huruf kecil semua), sisanya biarkan saja tidak perlu diubah, kemudian klik icon <strong>✓</strong> diatas untuk menyimpan APN baru.</li>
+                <img src="./img/21.jpg" alt="Screenshot APN">
+                <img src="./img/22.jpg" alt="Screenshot APN">
+                <li>Setelah tersimpan Anda bisa mengklik bulatan kecil disamping kanan APN yang baru saja Anda simpan untuk menggunakannya, kemudian <strong>restart/mulai ulang perangkat</strong> Anda agar tidak terjadi sinyal/jaringan susah muncul (ini terjadi di beberapa ponsel terutama merk <strong>Redmi/Poco/Samsung</strong>.</li>
+                <img src="./img/23.jpg" alt="Screenshot APN">
+                <p><a href="#langkah">Kembali ke atas</a></p>
+              </ol>
+            </div>
+            <div class="card">
+              <h2 id="beli_kuota">Cara Membeli Kuota Belajar</h2>
+              <p>Pastikan Anda telah menginstal aplikasi MyTelkomsel terbaru dari Play Store dan Anda telah Masuk dengan nomor yang akan di isi dengan Kuota Belajar.</p>
+              <h3>langkah-langkah Membeli Kuota Belajar</h3>
+              <ol>
+                <li>Buka aplikasi MyTelkomsel Anda.</li>
+                <li>Klik halaman <strong>Beli Paket</strong> dibawah kemudian klik bagian <strong>Internet</strong>.</li>
+                <img src="./img/24.jpg" alt="Screenshot APN">
+                <li>Scroll kebawah sampai Anda menemukan <strong>Kuota Bundling</strong> lalu klik bagian <strong>Pendidikan</strong> kemudian klik <strong>Lihat Semua</strong> untuk melihat ketersediaan kuota (karena di beberapa Kartu SIM hanya ada sedikit pilihan kuota yang bisa dibeli)</li>
+                <img src="./img/25.jpg" alt="Screenshot APN">
+                <li>Jika Anda melihat ada pilihan kuota seperti 2 kuota pilihan yang ditandai di gambar dibawah maka Anda bisa langsung membelinya</li>
+                <img src="./img/26.jpg" alt="Screenshot APN">
+                <img src="./img/27.jpg" alt="Screenshot APN">
+              </ol>
+            </div>
+            
+            <div class="card">
                 <h2>Tips Tambahan</h2>
                 <ul>
                     <li><strong>Memperbarui Konfigurasi:</strong> Jika ada pembaruan file <code>clash.yaml</code>, kamu bisa mengunduhnya lagi, lalu di halaman "Profiles", geser profil lama ke kiri dan hapus. Setelah itu, impor lagi file yang baru.</li>
@@ -178,6 +227,7 @@
                     <li><strong>Tidak Terhubung?</strong> Pastikan kamu sudah memberikan semua izin yang diminta aplikasi dan kuota yang sesuai masih aktif.</li>
                 </ul>
             </div>
+            
 
         </main>
 
