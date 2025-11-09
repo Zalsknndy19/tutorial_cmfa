@@ -1,0 +1,471 @@
+# ===============================================
+# Template Konfigurasi Clash - Dibuat oleh ZHStore
+# ===============================================
+
+# Pengaturan Port
+# port: 7890             # Port untuk HTTP Proxy
+# socks-port: 7891       # Port untuk SOCKS5 Proxy
+tproxy-port: 7893        # Port untuk Transparent Proxy (Digunakan oleh Clash for Magisk)
+bind-address: "*"        # Izinkan koneksi dari semua alamat (LAN)
+
+# Pengaturan Umum
+mode: rule
+allow-lan: true
+log-level: silent
+external-controller: 0.0.0.0:9090
+external-ui: yacd-gh-pages # Antarmuka web default
+unified-delay: true
+ipv6: false
+
+# Pengaturan DNS
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:1053
+  enhanced-mode: redir-host
+  use-host: true
+  nameserver:
+    - 1.1.1.1
+    - 8.8.8.8
+  fallback:
+    - 1.0.0.1
+    - https://cloudflare-dns.com/dns-query
+
+# ===============================================
+# BLOK PROXY (AKAN DIISI SECARA DINAMIS)
+# ===============================================
+proxies:
+  - name: "🇸🇬 (SG) 28 Kallang Place # 05-08 Singapore 33951"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 5cdd217b-3590-4aee-adc4-777686a27f16
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: joss.krukkruk.web.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/Free-VPN-CF-Geo-Project/103.195.191.55=443"
+      headers:
+        Host: joss.krukkruk.web.id
+  - name: "🇸🇬 (SG) DigitalOcean"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 91ef329f-14c2-4ea9-903e-2b8345fce9df
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: joss.krukkruk.web.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/Free-VPN-CF-Geo-Project/104.248.145.216=443"
+      headers:
+        Host: joss.krukkruk.web.id
+  - name: "🇸🇬 (SG) Oracle Corporatio"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 81c7297f-461c-4403-ad38-3a8909366a2b
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: joss.krukkruk.web.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/Free-VPN-CF-Geo-Project/129.150.49.58=18650"
+      headers:
+        Host: joss.krukkruk.web.id
+  - name: "🇸🇬 (SG) Oracle Corporati"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 7cc5b06b-e601-4c51-8082-dc87d6af40aa
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: joss.krukkruk.web.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/Free-VPN-CF-Geo-Project/129.150.36.188=53435"
+      headers:
+        Host: joss.krukkruk.web.id
+  - name: "🇸🇬 (SG) 16 COLLYER QUA"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 67e3d43d-583a-427b-8560-1e61963d8447
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: joss.krukkruk.web.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/Free-VPN-CF-Geo-Project/124.156.202.172=443"
+      headers:
+        Host: joss.krukkruk.web.id
+  - name: "🇸🇬 (SG) 6 COLLYER QUAY"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 92b9840a-69cf-41aa-8121-c4cfd549eae0
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: joss.krukkruk.web.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/Free-VPN-CF-Geo-Project/129.226.150.167=443"
+      headers:
+        Host: joss.krukkruk.web.id
+  - name: "🇸🇬 (SG) Oracle Corporat"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 2ef0efbe-728a-4f37-9193-f75dff50865f
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: joss.krukkruk.web.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/Free-VPN-CF-Geo-Project/129.150.58.86=57621"
+      headers:
+        Host: joss.krukkruk.web.id
+  - name: "🇸🇬 (SG) Amazon Data Services Singapore"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 799b8472-e67c-4482-b9db-e19c03b46c9d
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: joss.krukkruk.web.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/Free-VPN-CF-Geo-Project/13.250.14.76=443"
+      headers:
+        Host: joss.krukkruk.web.id
+  - name: "🇸🇬 (SG) Oracle Corpora"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 8566858e-7edb-42ae-8018-612b0e4ea351
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: joss.krukkruk.web.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/Free-VPN-CF-Geo-Project/138.2.69.236=23334"
+      headers:
+        Host: joss.krukkruk.web.id
+  - name: "🇸🇬 (SG) Oracle Corpor"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: af21253d-6770-41c7-acb1-fa9a44380660
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: joss.krukkruk.web.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/Free-VPN-CF-Geo-Project/138.2.89.238=43254"
+      headers:
+        Host: joss.krukkruk.web.id
+  - name: "🇸🇬 (SG) M1 LIMITED"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 33065e19-c364-4fd6-a8cf-4b3a6192a3a7
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: joss.krukkruk.web.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/Free-VPN-CF-Geo-Project/138.75.209.209=80"
+      headers:
+        Host: joss.krukkruk.web.id
+  - name: "🇸🇬 (SG) Oracle Corpo"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 4a853c43-e865-43b6-9952-430896e6376b
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: joss.krukkruk.web.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/Free-VPN-CF-Geo-Project/138.2.64.229=443"
+      headers:
+        Host: joss.krukkruk.web.id
+  - name: "🇸🇬 (SG) Oracle Corp"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 58255909-4bce-487c-a6a4-3266976a404a
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: joss.krukkruk.web.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/Free-VPN-CF-Geo-Project/138.2.95.33=17465"
+      headers:
+        Host: joss.krukkruk.web.id
+  - name: "🇸🇬 (SG) Oracle Cor"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 5556cbfe-dddb-488a-a2a1-d6fc929f8f29
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: joss.krukkruk.web.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/Free-VPN-CF-Geo-Project/138.2.89.64=32962"
+      headers:
+        Host: joss.krukkruk.web.id
+  - name: "🇸🇬 (SG) Vultr Holdings"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: bf01c3b6-f076-4ce3-aed1-780ad6236866
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: joss.krukkruk.web.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/Free-VPN-CF-Geo-Project/139.180.154.158=443"
+      headers:
+        Host: joss.krukkruk.web.id
+  - name: "🇮🇩 (ID) Amazon.com"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 53cbbbf0-4758-4307-b525-e94216265e81
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: joss.krukkruk.web.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/Free-VPN-CF-Geo-Project/43.218.77.16=1443"
+      headers:
+        Host: joss.krukkruk.web.id
+  - name: "🇮🇩 (ID) Amazon.co"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: b6635a10-9893-4901-b540-62a52bb74de6
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: joss.krukkruk.web.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/Free-VPN-CF-Geo-Project/43.218.77.16=443"
+      headers:
+        Host: joss.krukkruk.web.id
+  - name: "🇮🇩 (ID) PT Telekomunikasi Indonesia"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 27866d49-8f69-4f4c-93d6-21408196f62e
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: joss.krukkruk.web.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/Free-VPN-CF-Geo-Project/36.95.152.58=12137"
+      headers:
+        Host: joss.krukkruk.web.id
+  - name: "🇮🇩 (ID) 21F Ciputra World 1 DBS Tower JalanProf DR Satrio Kav 35 Jakarta 12940 Indonesia"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: ffbda54e-202b-48d6-a746-0dae0e8ce644
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: joss.krukkruk.web.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/Free-VPN-CF-Geo-Project/149.129.250.8=443"
+      headers:
+        Host: joss.krukkruk.web.id
+  - name: "🇸🇬 (SG) 28 Kallang Place # 05-08 Singapore 339518"
+    type: vless
+    server: support.zoom.us
+    port: 443
+    uuid: 822bec9c-0553-40ce-8017-0b9452b7e9ff
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: support.zoom.us.joss.krukkruk.web.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/Free-VPN-CF-Geo-Project/103.195.191.55=443"
+      headers:
+        Host: support.zoom.us.joss.krukkruk.web.id
+  - name: "🇸🇬 (SG) DigitalOcea"
+    type: vless
+    server: support.zoom.us
+    port: 443
+    uuid: bf87748b-cb5e-463c-a9f8-b622fb5aa72d
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: support.zoom.us.joss.krukkruk.web.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/Free-VPN-CF-Geo-Project/104.248.145.216=443"
+      headers:
+        Host: support.zoom.us.joss.krukkruk.web.id
+  - name: "🇸🇬 (SG) Oracle Co"
+    type: vless
+    server: support.zoom.us
+    port: 443
+    uuid: a9acc9b2-95b8-4f80-9957-8daff5f04d79
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: support.zoom.us.joss.krukkruk.web.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/Free-VPN-CF-Geo-Project/129.150.49.58=18650"
+      headers:
+        Host: support.zoom.us.joss.krukkruk.web.id
+  - name: "🇸🇬 (SG) Oracle C"
+    type: vless
+    server: support.zoom.us
+    port: 443
+    uuid: d88f35ba-c3cc-4ea6-96ff-6f6ff9eaa4f6
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: support.zoom.us.joss.krukkruk.web.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/Free-VPN-CF-Geo-Project/129.150.36.188=53435"
+      headers:
+        Host: support.zoom.us.joss.krukkruk.web.id
+  - name: "🇸🇬 (SG) 16 COLLYER QUAY"
+    type: vless
+    server: support.zoom.us
+    port: 443
+    uuid: 819ae3a8-8ea5-4565-b7fb-fbc1d49adc89
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: support.zoom.us.joss.krukkruk.web.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/Free-VPN-CF-Geo-Project/124.156.202.172=443"
+      headers:
+        Host: support.zoom.us.joss.krukkruk.web.id
+
+
+# ===============================================
+# GRUP PROXY (AKAN DIISI SECARA DINAMIS)
+# ===============================================
+proxy-groups:
+  - name: 💎 ZHStore
+    type: select
+    proxies:
+      - "🇸🇬 (SG) 28 Kallang Place # 05-08 Singapore 339518"
+      - "🇸🇬 (SG) DigitalOcean"
+      - "🇸🇬 (SG) Oracle Corporatio"
+      - "🇸🇬 (SG) Oracle Corporati"
+      - "🇸🇬 (SG) 16 COLLYER QUAY"
+      - "🇸🇬 (SG) 6 COLLYER QUAY"
+      - "🇸🇬 (SG) Oracle Corporat"
+      - "🇸🇬 (SG) Amazon Data Services Singapore"
+      - "🇸🇬 (SG) Oracle Corpora"
+      - "🇸🇬 (SG) Oracle Corpor"
+      - "🇸🇬 (SG) M1 LIMITED"
+      - "🇸🇬 (SG) Oracle Corpo"
+      - "🇸🇬 (SG) Oracle Corp"
+      - "🇸🇬 (SG) Oracle Cor"
+      - "🇸🇬 (SG) Vultr Holdings"
+      - "🇮🇩 (ID) Amazon.com"
+      - "🇮🇩 (ID) Amazon.co"
+      - "🇮🇩 (ID) PT Telekomunikasi Indonesia"
+      - "🇮🇩 (ID) 21F Ciputra World 1 DBS Tower JalanProf DR Satrio Kav 35 Jakarta 12940 Indonesia"
+      - "🇸🇬 (SG) 28 Kallang Place # 05-08 Singapore 33951"
+      - "🇸🇬 (SG) DigitalOcea"
+      - "🇸🇬 (SG) Oracle Co"
+      - "🇸🇬 (SG) Oracle C"
+      - "🇸🇬 (SG) 16 COLLYER QUA"
+
+      - 🚀 BEST-PING
+      - DIRECT
+
+  - name: 🚀 BEST-PING
+    type: url-test
+    url: http://www.gstatic.com/generate_204 # URL tes ping standar
+    interval: 300 # Tes setiap 5 menit
+    tolerance: 50
+    proxies:
+      - "🇸🇬 (SG) 28 Kallang Place # 05-08 Singapore 339518"
+      - "🇸🇬 (SG) DigitalOcean"
+      - "🇸🇬 (SG) Oracle Corporatio"
+      - "🇸🇬 (SG) Oracle Corporati"
+      - "🇸🇬 (SG) 16 COLLYER QUAY"
+      - "🇸🇬 (SG) 6 COLLYER QUAY"
+      - "🇸🇬 (SG) Oracle Corporat"
+      - "🇸🇬 (SG) Amazon Data Services Singapore"
+      - "🇸🇬 (SG) Oracle Corpora"
+      - "🇸🇬 (SG) Oracle Corpor"
+      - "🇸🇬 (SG) M1 LIMITED"
+      - "🇸🇬 (SG) Oracle Corpo"
+      - "🇸🇬 (SG) Oracle Corp"
+      - "🇸🇬 (SG) Oracle Cor"
+      - "🇸🇬 (SG) Vultr Holdings"
+      - "🇮🇩 (ID) Amazon.com"
+      - "🇮🇩 (ID) Amazon.co"
+      - "🇮🇩 (ID) PT Telekomunikasi Indonesia"
+      - "🇮🇩 (ID) 21F Ciputra World 1 DBS Tower JalanProf DR Satrio Kav 35 Jakarta 12940 Indonesia"
+      - "🇸🇬 (SG) 28 Kallang Place # 05-08 Singapore 33951"
+      - "🇸🇬 (SG) DigitalOcea"
+      - "🇸🇬 (SG) Oracle Co"
+      - "🇸🇬 (SG) Oracle C"
+      - "🇸🇬 (SG) 16 COLLYER QUA"
+
+
+# ===============================================
+# ATURAN (RULES)
+# ===============================================
+rules:
+  - MATCH,💎 ZHStore
