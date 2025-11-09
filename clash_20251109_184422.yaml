@@ -1,0 +1,318 @@
+# ===============================================
+# Template Konfigurasi Clash - Dibuat oleh ZHStore
+# ===============================================
+
+# Pengaturan Port
+# port: 7890             # Port untuk HTTP Proxy
+# socks-port: 7891       # Port untuk SOCKS5 Proxy
+tproxy-port: 7893        # Port untuk Transparent Proxy (Digunakan oleh Clash for Magisk)
+bind-address: "*"        # Izinkan koneksi dari semua alamat (LAN)
+
+# Pengaturan Umum
+mode: rule
+allow-lan: true
+log-level: silent
+external-controller: 0.0.0.0:9090
+external-ui: yacd-gh-pages # Antarmuka web default
+unified-delay: true
+ipv6: false
+
+# Pengaturan DNS
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:1053
+  enhanced-mode: redir-host
+  use-host: true
+  nameserver:
+    - 1.1.1.1
+    - 8.8.8.8
+  fallback:
+    - 1.0.0.1
+    - https://cloudflare-dns.com/dns-query
+
+# ===============================================
+# BLOK PROXY (AKAN DIISI SECARA DINAMIS)
+# ===============================================
+proxies:
+  - name: "ID Amazon.com [43.218.77.16]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 725ecce0-f2de-4390-9a7f-bfe06c4231e2
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.ngopi.qzz.io
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/43.218.77.16-1443"
+      headers:
+        Host: zalsknndy19.ngopi.qzz.io
+  - name: "ID PT Pusat Media Indonesia [103.6.207.108]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 725ecce0-f2de-4390-9a7f-bfe06c4231e2
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.ngopi.qzz.io
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/103.6.207.108-8080"
+      headers:
+        Host: zalsknndy19.ngopi.qzz.io
+  - name: "ID PT Telekomunikasi Indonesia [36.95.152.58]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 725ecce0-f2de-4390-9a7f-bfe06c4231e2
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.ngopi.qzz.io
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/36.95.152.58-12137"
+      headers:
+        Host: zalsknndy19.ngopi.qzz.io
+  - name: "JP Vultr Holdings [198.13.42.58]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 725ecce0-f2de-4390-9a7f-bfe06c4231e2
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.ngopi.qzz.io
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/198.13.42.58-32954"
+      headers:
+        Host: zalsknndy19.ngopi.qzz.io
+  - name: "JP Oracle Corporation [217.142.230.253]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 725ecce0-f2de-4390-9a7f-bfe06c4231e2
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.ngopi.qzz.io
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/217.142.230.253-587"
+      headers:
+        Host: zalsknndy19.ngopi.qzz.io
+  - name: "JP Prinode AB [212.52.0.61]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 725ecce0-f2de-4390-9a7f-bfe06c4231e2
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.ngopi.qzz.io
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/212.52.0.61-1846"
+      headers:
+        Host: zalsknndy19.ngopi.qzz.io
+  - name: "JP imported inetnum object for OCPL-1 [140.83.57.114]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 725ecce0-f2de-4390-9a7f-bfe06c4231e2
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.ngopi.qzz.io
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/140.83.57.114-25965"
+      headers:
+        Host: zalsknndy19.ngopi.qzz.io
+  - name: "JP Oracle Public Cloud [168.138.46.67]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 725ecce0-f2de-4390-9a7f-bfe06c4231e2
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.ngopi.qzz.io
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/168.138.46.67-443"
+      headers:
+        Host: zalsknndy19.ngopi.qzz.io
+  - name: "JP Cloudflare London [138.2.12.103]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 725ecce0-f2de-4390-9a7f-bfe06c4231e2
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.ngopi.qzz.io
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/138.2.12.103-14453"
+      headers:
+        Host: zalsknndy19.ngopi.qzz.io
+  - name: "JP 6 COLLYER QUAY [43.133.10.236]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 725ecce0-f2de-4390-9a7f-bfe06c4231e2
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.ngopi.qzz.io
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/43.133.10.236-33405"
+      headers:
+        Host: zalsknndy19.ngopi.qzz.io
+  - name: "SG Alibaba Cloud - SG [47.74.254.191]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 725ecce0-f2de-4390-9a7f-bfe06c4231e2
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.ngopi.qzz.io
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/47.74.254.191-8900"
+      headers:
+        Host: zalsknndy19.ngopi.qzz.io
+  - name: "SG Oracle Corporation [129.150.58.86]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 725ecce0-f2de-4390-9a7f-bfe06c4231e2
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.ngopi.qzz.io
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/129.150.58.86-57621"
+      headers:
+        Host: zalsknndy19.ngopi.qzz.io
+  - name: "SG DigitalOcean [178.128.80.43]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 725ecce0-f2de-4390-9a7f-bfe06c4231e2
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.ngopi.qzz.io
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/178.128.80.43-443"
+      headers:
+        Host: zalsknndy19.ngopi.qzz.io
+  - name: "SG Greencloud LLC [194.127.193.240]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 725ecce0-f2de-4390-9a7f-bfe06c4231e2
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.ngopi.qzz.io
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/194.127.193.240-50791"
+      headers:
+        Host: zalsknndy19.ngopi.qzz.io
+  - name: "SG Amazon Data Services Singapore [13.250.131.37]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 725ecce0-f2de-4390-9a7f-bfe06c4231e2
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.ngopi.qzz.io
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/13.250.131.37-443"
+      headers:
+        Host: zalsknndy19.ngopi.qzz.io
+
+
+# ===============================================
+# GRUP PROXY (AKAN DIISI SECARA DINAMIS)
+# ===============================================
+proxy-groups:
+  - name: 💎 ZHStore
+    type: select
+    proxies:
+      - "ID Amazon.com [43.218.77.16]"
+      - "ID PT Pusat Media Indonesia [103.6.207.108]"
+      - "ID PT Telekomunikasi Indonesia [36.95.152.58]"
+      - "JP Vultr Holdings [198.13.42.58]"
+      - "JP Oracle Corporation [217.142.230.253]"
+      - "JP Prinode AB [212.52.0.61]"
+      - "JP imported inetnum object for OCPL-1 [140.83.57.114]"
+      - "JP Oracle Public Cloud [168.138.46.67]"
+      - "JP Cloudflare London [138.2.12.103]"
+      - "JP 6 COLLYER QUAY [43.133.10.236]"
+      - "SG Alibaba Cloud - SG [47.74.254.191]"
+      - "SG Oracle Corporation [129.150.58.86]"
+      - "SG DigitalOcean [178.128.80.43]"
+      - "SG Greencloud LLC [194.127.193.240]"
+      - "SG Amazon Data Services Singapore [13.250.131.37]"
+
+      - 🚀 BEST-PING
+      - DIRECT
+
+  - name: 🚀 BEST-PING
+    type: url-test
+    url: http://www.gstatic.com/generate_204 # URL tes ping standar
+    interval: 300 # Tes setiap 5 menit
+    tolerance: 50
+    proxies:
+      - "ID Amazon.com [43.218.77.16]"
+      - "ID PT Pusat Media Indonesia [103.6.207.108]"
+      - "ID PT Telekomunikasi Indonesia [36.95.152.58]"
+      - "JP Vultr Holdings [198.13.42.58]"
+      - "JP Oracle Corporation [217.142.230.253]"
+      - "JP Prinode AB [212.52.0.61]"
+      - "JP imported inetnum object for OCPL-1 [140.83.57.114]"
+      - "JP Oracle Public Cloud [168.138.46.67]"
+      - "JP Cloudflare London [138.2.12.103]"
+      - "JP 6 COLLYER QUAY [43.133.10.236]"
+      - "SG Alibaba Cloud - SG [47.74.254.191]"
+      - "SG Oracle Corporation [129.150.58.86]"
+      - "SG DigitalOcean [178.128.80.43]"
+      - "SG Greencloud LLC [194.127.193.240]"
+      - "SG Amazon Data Services Singapore [13.250.131.37]"
+
+
+# ===============================================
+# ATURAN (RULES)
+# ===============================================
+rules:
+  - MATCH,💎 ZHStore
