@@ -1,0 +1,318 @@
+# ===============================================
+# Template Konfigurasi Clash - Dibuat oleh ZHStore
+# ===============================================
+
+# Pengaturan Port
+# port: 7890             # Port untuk HTTP Proxy
+# socks-port: 7891       # Port untuk SOCKS5 Proxy
+tproxy-port: 7893        # Port untuk Transparent Proxy (Digunakan oleh Clash for Magisk)
+bind-address: "*"        # Izinkan koneksi dari semua alamat (LAN)
+
+# Pengaturan Umum
+mode: rule
+allow-lan: true
+log-level: silent
+external-controller: 0.0.0.0:9090
+external-ui: yacd-gh-pages # Antarmuka web default
+unified-delay: true
+ipv6: false
+
+# Pengaturan DNS
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:1053
+  enhanced-mode: redir-host
+  use-host: true
+  nameserver:
+    - 1.1.1.1
+    - 8.8.8.8
+  fallback:
+    - 1.0.0.1
+    - https://cloudflare-dns.com/dns-query
+
+# ===============================================
+# BLOK PROXY (AKAN DIISI SECARA DINAMIS)
+# ===============================================
+proxies:
+  - name: "🇸🇬 (SG) PDK LLC"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 6caae252-acbc-410e-a193-51d4a4d4adab
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: joss.gpj.web.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/Free-VPN-CF-Geo-Project/31.192.238.71=2053"
+      headers:
+        Host: joss.gpj.web.id
+  - name: "🇸🇬 (SG) 3NT SOLUTIONS LLP"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 739d266a-f8e5-4551-866c-7d196ef176ca
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: joss.gpj.web.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/Free-VPN-CF-Geo-Project/38.180.249.123=443"
+      headers:
+        Host: joss.gpj.web.id
+  - name: "🇸🇬 (SG) Melbikomas UAB"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 6b56df5e-6816-45e1-9338-bd2c495200d5
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: joss.gpj.web.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/Free-VPN-CF-Geo-Project/91.192.81.154=2053"
+      headers:
+        Host: joss.gpj.web.id
+  - name: "🇸🇬 (SG) Oracle Svenska AB"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: aad71f5d-fc4c-4fe7-a25a-7523ef1e28c6
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: joss.gpj.web.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/Free-VPN-CF-Geo-Project/213.35.100.31=47112"
+      headers:
+        Host: joss.gpj.web.id
+  - name: "🇸🇬 (SG) Amazon Data Services Singapore"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 4f9f4727-28f6-4d10-b4e4-dcc63da44092
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: joss.gpj.web.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/Free-VPN-CF-Geo-Project/13.250.31.132=443"
+      headers:
+        Host: joss.gpj.web.id
+  - name: "(MY) TM TECHNOLOGY ðŸ‡²ðŸ‡¾"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: aa59f0e5-5514-4aa0-b65e-9ae0f01f981b
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: violetvpn.my.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/my-tm"
+      headers:
+        Host: violetvpn.my.id
+  - name: "(SG) Digitalocean, LLC ðŸ‡¸ðŸ‡¬"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: a0edbbb5-6dfc-467d-8c2b-0e37ddef474e
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: violetvpn.my.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/sg-do"
+      headers:
+        Host: violetvpn.my.id
+  - name: "(SG) Melbikomas Uab ðŸ‡¸ðŸ‡¬"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 8635f17c-86bc-4426-87b5-2a6257c224b2
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: violetvpn.my.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/sg-melbi"
+      headers:
+        Host: violetvpn.my.id
+  - name: "(SG) Oracle Corporation ðŸ‡¸ðŸ‡¬"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: 60cb8ee3-edb1-458c-9c2d-5b42fa12d573
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: violetvpn.my.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/sg-orcl"
+      headers:
+        Host: violetvpn.my.id
+  - name: "Random ISP"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: a8e49d89-9bc0-4967-8a5c-2c199f475cdb
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: violetvpn.my.id
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/random"
+      headers:
+        Host: violetvpn.my.id
+  - name: "SG Alibaba Cloud - SG [47.74.254.191]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: bf5e4132-c053-4443-81c1-aabd5d5ee32d
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/47.74.254.191-8900"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "SG Oracle Corporation [138.2.95.61]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: bf5e4132-c053-4443-81c1-aabd5d5ee32d
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/138.2.95.61-1111"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "SG Greencloud LLC [194.127.193.124]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: bf5e4132-c053-4443-81c1-aabd5d5ee32d
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/194.127.193.124-24467"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "SG DigitalOcean [104.248.145.216]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: bf5e4132-c053-4443-81c1-aabd5d5ee32d
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/104.248.145.216-443"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+  - name: "SG Vultr Holdings [45.32.100.46]"
+    type: vless
+    server: edu.ruangguru.com
+    port: 443
+    uuid: bf5e4132-c053-4443-81c1-aabd5d5ee32d
+    cipher: none
+    tls: true
+    skip-cert-verify: true
+    servername: zalsknndy19.hikosiga.workers.dev
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/45.32.100.46-13802"
+      headers:
+        Host: zalsknndy19.hikosiga.workers.dev
+
+
+# ===============================================
+# GRUP PROXY (AKAN DIISI SECARA DINAMIS)
+# ===============================================
+proxy-groups:
+  - name: 💎 ZHStore
+    type: select
+    proxies:
+      - "🇸🇬 (SG) PDK LLC"
+      - "🇸🇬 (SG) 3NT SOLUTIONS LLP"
+      - "🇸🇬 (SG) Melbikomas UAB"
+      - "🇸🇬 (SG) Oracle Svenska AB"
+      - "🇸🇬 (SG) Amazon Data Services Singapore"
+      - "(MY) TM TECHNOLOGY ðŸ‡²ðŸ‡¾"
+      - "(SG) Digitalocean, LLC ðŸ‡¸ðŸ‡¬"
+      - "(SG) Melbikomas Uab ðŸ‡¸ðŸ‡¬"
+      - "(SG) Oracle Corporation ðŸ‡¸ðŸ‡¬"
+      - "Random ISP"
+      - "SG Alibaba Cloud - SG [47.74.254.191]"
+      - "SG Oracle Corporation [138.2.95.61]"
+      - "SG Greencloud LLC [194.127.193.124]"
+      - "SG DigitalOcean [104.248.145.216]"
+      - "SG Vultr Holdings [45.32.100.46]"
+
+      - 🚀 BEST-PING
+      - DIRECT
+
+  - name: 🚀 BEST-PING
+    type: url-test
+    url: http://www.gstatic.com/generate_204 # URL tes ping standar
+    interval: 300 # Tes setiap 5 menit
+    tolerance: 50
+    proxies:
+      - "🇸🇬 (SG) PDK LLC"
+      - "🇸🇬 (SG) 3NT SOLUTIONS LLP"
+      - "🇸🇬 (SG) Melbikomas UAB"
+      - "🇸🇬 (SG) Oracle Svenska AB"
+      - "🇸🇬 (SG) Amazon Data Services Singapore"
+      - "(MY) TM TECHNOLOGY ðŸ‡²ðŸ‡¾"
+      - "(SG) Digitalocean, LLC ðŸ‡¸ðŸ‡¬"
+      - "(SG) Melbikomas Uab ðŸ‡¸ðŸ‡¬"
+      - "(SG) Oracle Corporation ðŸ‡¸ðŸ‡¬"
+      - "Random ISP"
+      - "SG Alibaba Cloud - SG [47.74.254.191]"
+      - "SG Oracle Corporation [138.2.95.61]"
+      - "SG Greencloud LLC [194.127.193.124]"
+      - "SG DigitalOcean [104.248.145.216]"
+      - "SG Vultr Holdings [45.32.100.46]"
+
+
+# ===============================================
+# ATURAN (RULES)
+# ===============================================
+rules:
+  - MATCH,💎 ZHStore
